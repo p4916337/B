@@ -1,1 +1,371 @@
-<html> yeyeyey</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猪猪侠导航网</title>
+    <style> 
+        * {   
+            margin: 0;
+            padding: 0;  
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }   
+       
+        body {
+            background-color: #f5f5f5;
+            max-width: 600px;
+            margin: 0 auto;  
+        }
+   
+        /* 顶部标 题栏 */
+        .header {
+            background-color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .header-share {
+            background-color: #7b68ee;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 个人信息卡片 */
+        .profile-card {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .profile-id {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            color: #e63946;
+            margin: 10px 0;
+        }
+
+        .profile-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* 红色通知栏 */
+        .notice-bar {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* 标签栏 */
+        .tabs {
+            display: flex;
+            margin: 10px;
+        }
+
+        .tab-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tab-item.active {
+            opacity: 1;
+        }
+
+        .tab-hot {
+            background: linear-gradient(to right, #7b68ee, #ff69b4);
+        }
+
+        .tab-software {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        /* 功能按钮栏 */
+        .btn-group {
+            display: flex;
+            margin: 0 10px;
+            gap: 5px;
+        }
+
+        .func-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-hack {
+            background-color: #9932cc;
+        }
+
+        .btn-coin {
+            background-color: #ff8c00;
+        }
+
+        .btn-vpn {
+            background-color: #00bfff;
+        }
+
+        /* 游戏列表 */
+        .game-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        .game-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .game-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            background-color: #eee;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            color: #fa0000;
+        }
+
+        .game-desc {
+            font-size: 12px;
+            color: #FF0099;
+        }
+
+        /* 底部导航 */
+        .footer-nav {
+            display: flex;
+            background-color: #fff;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .nav-item.active {
+            color: #7b68ee;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: block;
+        }
+    </style>
+    <!-- 引入字体图标（替代截图中的图标） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部标题栏 -->
+    <div class="header">
+        <div class="header-title">猪猪侠🐷导航网 XKK58.CC</div>
+        <button class="header-share">
+         
+        </button>
+    </div>
+
+    <!-- 个人信息卡片 -->
+    <div class="profile-card">
+        <div class="profile-id">1555551</div>
+        <div class="profile-name">猪猪侠  <span style="color:#fff;background:#e63946;padding:2px 5px;border-radius:3px;font-size:12px;">实名认证</span></div>
+        <div>ID:1555551<i class="fa fa-copy"></i></div>
+        <!-- <button class="profile-btn">+自动回复</button> -->
+    </div>
+
+    <!-- 红色通知栏 -->
+    <div class="notice-bar">
+        📢 NG南宫集团，世界杯下注大额秒出款，返现红包联系嗨信1555551!  嗨信 <a href="https://haixin.wwhy.top" target="_blank">点击下载</a> 飞机✈️联系@w123321kk
+    </div>
+
+    <!-- 标签栏 -->
+    <div class="tabs">
+        <div class="tab-item tab-hot active">热门游戏</div>
+    
+    </div>
+
+    <!-- 
+    <div class="btn-group">
+        <button class="func-btn btn-hack">模拟器</button>
+        <button class="func-btn btn-coin">虚拟币教程</button>
+        <button class="func-btn btn-vpn">VPN</button>
+    </div> -->
+
+    <!-- 游戏列表 -->
+    <div class="game-list">
+
+        <!-- 第一个-->
+        <div class="game-item" onclick="openInNewTab(1)">
+            <div class="game-icon">
+                <img src="https://img.cdn1.vip/i/6a12e968ad54d_1779624296.webp" alt="聚鑫汇">
+            </div>
+            <div class="game-name">聚鑫汇</div>
+            <div class="game-desc">新人大水台 注册送58+体育扶持58 首存100+88扶持 充值1000反588</div>
+        </div>
+          <!-- 第一个结束-->
+        
+
+        
+    </div>
+
+        <div class="tab-item  tab-hot tab-software">实用软件</div>
+      <div class="game-list">
+
+       <!-- 第2个-->
+          <div class="game-item"  onclick="openInNewTab(5)">
+            <div class="game-icon">
+                <img src="https://img.cdn1.vip/i/6a154109db6da_1779777801.webp" alt="PG模拟器">
+            </div>
+            <div class="game-name">PG模拟器</div>
+            <div class="game-desc">PG模拟器 点击立即玩 </div>
+        </div>
+     <!-- 第2个结束-->
+
+        <!-- 第3个-->
+          <div class="game-item"  onclick="openInNewTab(6)">
+            <div class="game-icon">
+                <img src="https://img.cdn1.vip/i/6a1542cc0687d_1779778252.webp" alt="深夜福利">
+            </div>
+            <div class="game-name">深夜福利</div>
+            <div class="game-desc">看片黄网内的任何广告都不要相信</div>
+        </div>
+     <!-- 第3个结束-->
+
+          
+          
+      </div>
+<!--
+    <div class="footer-nav">
+        <div class="nav-item active">
+            <span class="nav-icon"><i class="fa fa-home"></i></span>
+            <div>首页</div>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon"><i class="fa fa-headset"></i></span>
+            <div>客服</div>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon"><i class="fa fa-compass"></i></span>
+            <div>发现</div>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon"><i class="fa fa-gift"></i></span>
+            <div>抽奖</div>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon"><i class="fa fa-star"></i></span>
+            <div>玩呗</div>
+        </div>
+    </div> -->
+
+    <script>
+
+function openInNewTab(id) {
+    //跳转的对应的网页
+        if(id==1){
+              window.open('https://ybkvbz.tckqxx.com/app/register.php?site_id=1066&topId=28236&selfPlanId=13582', '_blank');
+        }
+      
+    if(id==2){
+              window.open('https://654.pw', '_blank');
+        }
+     if(id==3){
+              window.open('https://www.es17.vip', '_blank');
+        }
+  }
+
+
+        
+
+        
+        // 简单的标签切换逻辑
+        const tabHot = document.querySelector('.tab-hot');
+        const tabSoftware = document.querySelector('.tab-software');
+        const gameList = document.querySelector('.game-list');
+
+        // tabSoftware.addEventListener('click', function() {
+        //     tabHot.classList.remove('active');
+        //     tabSoftware.classList.add('active');
+        //     gameList.innerHTML = '<!-- 第五个-->          <div class="game-item"  onclick="openInNewTab(5)">            <div class="game-icon">                <img src="https://img.cdn1.vip/i/6a154109db6da_1779777801.webp" alt="PG模拟器">            </div>            <div class="game-name">PG模拟器</div>            <div class="game-desc">PG模拟器 点击立即玩 </div>        </div>     <!-- 第五个结束-->        <!-- 第六个-->          <div class="game-item"  onclick="openInNewTab(6)">            <div class="game-icon">                <img src="https://img.cdn1.vip/i/6a1542cc0687d_1779778252.webp" alt="深夜福利">            </div>            <div class="game-name">深夜福利</div>            <div class="game-desc">看片黄网内的任何广告都不要相信</div>        </div>     <!-- 第六个结束-->';
+        // });
+
+        tabHot.addEventListener('click', function() {
+            tabSoftware.classList.remove('active');
+            tabHot.classList.add('active');
+            // 恢复游戏列表（简化版，实际项目中建议用模板渲染）
+            location.reload();
+        });
+    </script>
+</body>
+</html>
